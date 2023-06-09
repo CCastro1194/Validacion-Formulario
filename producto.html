@@ -6,57 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/css/styles.css">
-    <script type="text/javascript" src="resources/js/bootstrap.bundle.min.js"></script>
     <title>Registro de Producto</title>
 </head>
 <body>
     
     <main class="container">
-        <form class="row needs-validation" novalidate>
+
+        <form class="needs-validation" novalidate>
             <legend>Registro de Producto</legend>
-            <fieldset class="col-lg-12">
-                
-                <label for="codigo" class="form-label">Codigo:</label>
-                <input type="text" class="form-control" id="codigo" value="mark" required>
-                <div class="invalid-feedback"></div>
-
-                <label for="descripcion">Descripcion:</label>
-                <input type="text" class="form-control" id="codigo" value="mark" required>
-                <div class="invalid-feedback"></div>
-
-                <label for="codigo-de-barra">Codigo de Barra:</label>
-                <input type="text" class="form-control" id="codigo" value="mark" required>
-                <div class="invalid-feedback"></div>
-
-                <label for="precio-unitario">Precio Unitario:</label>
-                <input type="text" class="form-control" id="codigo" value="mark" required>
-                <div class="invalid-feedback"></div>
-
-                <label for="stock">Stock:</label>
-                <input type="text" class="form-control" id="codigo" value="mark" required>
-                <div class="invalid-feedback"></div>
-
-                <label for="proveedor">Proveedor:</label>
-                <input type="text" class="form-control" id="codigo" value="mark" required>
-                <div class="invalid-feedback"></div>
-
-            </fieldset>
             <fieldset>
+                <div class="row mb-3">
+                    <label for="codigo" class="col-sm-2 col-form-label text-end">Codigo:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="codigo" pattern=".{8,}" required>
+                        <div class="invalid-feedback">
+                            Porfavor ingrese el codigo.
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row mb-3">
+                    <label for="descripcion" class="col-sm-2 col-form-label text-end">Descripcion:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="descripcion" required>
+                        <div class="invalid-feedback">
+                            Porfavor ingrese una descripcion.
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="codigo-de-barra" class="col-sm-2 col-form-label text-end">Codigo de barra:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="codigo-de-barra" pattern="(?=.*\d)(?=.*[A-Z]).{8,}"required>
+                        <div class="invalid-feedback">
+                            Porfavor ingrese el codigo de barras
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="precio-unitario" class="col-sm-2 col-form-label text-end">Precio unitario:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="precio-unitario" required>
+                        <div class="invalid-feedback">
+                            Porfavor ingrese el precio unitario
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="stock" class="col-sm-2 col-form-label text-end">Stock:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="stock" required>
+                        <div class="invalid-feedback">
+                            Porfavor ingrese el stock.
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="proveedor" class="col-sm-2 col-form-label text-end">Proveedor:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="proveedor" required>
+                        <div class="invalid-feedback">
+                            Porfavor ingrese el proveedor
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 mb-5">
+                    <label for="estado" class="col-sm-2 text-end">Estado:</label>
+                    <div class="form-check col-sm-10">
+                        <input class="form-check-input" type="checkbox" id="Check" required>
+                        <label class="form-check-label" for="activo">Activo</label>
+                        <div class="invalid-feedback">
+                            Seleccione antes de Guardar
+                        </div>
+                    </div>
+                </div>
 
-                <label for="estado">Estado:
-                    <input type="checkbox">Activo
-                </label>
-                <label for="">Categoria:
-                    <select name="" id="">
+                <div class="row mb-5">
+                    <label for="categoria" class="col-sm-2 col-form-label text-end">Categoria:</label>
+                    <select class="form-select-sm col-sm-10">
+                        <option value="0">Eliga una categoria</option>
                         <option value="1">Categoria 1</option>
                         <option value="2">Categoria 2</option>
                         <option value="3">Categoria 3</option>
                         <option value="4">Categoria 4</option>
                     </select>
-                </label>
+                </div>
+                <div class="d-flex justify-content-around" >
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button class="btn btn-primary" type="reset">Cancelar</button>
+                </div>
             </fieldset>
+            
         </form>
+
     </main>
 
+    <script type="text/javascript" src="resources/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./resources/js/script.js"></script>
 </body>
 </html>
