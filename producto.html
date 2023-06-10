@@ -10,14 +10,14 @@
 </head>
 <body>
     
-    <main class="container">
+    <main class="container-fluid">
 
         <form class="needs-validation" novalidate>
             <legend>Registro de Producto</legend>
             <fieldset>
                 <div class="row mb-3">
-                    <label for="codigo" class="col-sm-2 col-form-label text-end">Codigo:</label>
-                    <div class="col-sm-10">
+                    <label for="codigo" class="col-sm-12 col-md-2 col-lg-2 col-form-label text-end">Codigo:</label>
+                    <div class="col-sm-12 col-md-10 col-lg-10">
                         <input type="text" class="form-control" id="codigo" pattern=".{8,}" required>
                         <div class="invalid-feedback">
                             Porfavor ingrese el codigo.
@@ -26,8 +26,8 @@
                     
                 </div>
                 <div class="row mb-3">
-                    <label for="descripcion" class="col-sm-2 col-form-label text-end">Descripcion:</label>
-                    <div class="col-sm-10">
+                    <label for="descripcion" class="col-sm-12 col-md-2 col-lg-2 col-form-label text-end">Descripcion:</label>
+                    <div class="col-sm-12 col-md-10 col-lg-10">
                         <input type="text" class="form-control" id="descripcion" required>
                         <div class="invalid-feedback">
                             Porfavor ingrese una descripcion.
@@ -35,17 +35,17 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="codigo-de-barra" class="col-sm-2 col-form-label text-end">Codigo de barra:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="codigo-de-barra" pattern="(?=.*\d)(?=.*[A-Z]).{8,}"required>
+                    <label for="codigo-de-barra" class="col-sm-12 col-md-2 col-lg-2 col-form-label text-end">Codigo de barra:</label>
+                    <div class="col-sm-12 col-md-10 col-lg-10">
+                        <input type="text" class="form-control" id="codigo-de-barra" pattern=".{12,}" required>
                         <div class="invalid-feedback">
                             Porfavor ingrese el codigo de barras
                         </div>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="precio-unitario" class="col-sm-2 col-form-label text-end">Precio unitario:</label>
-                    <div class="col-sm-10">
+                    <label for="precio-unitario" class="col-sm-12 col-md-2 col-lg-2 col-form-label text-end">Precio unitario:</label>
+                    <div class="col-sm-12 col-md-10 col-lg-10">
                         <input type="text" class="form-control" id="precio-unitario" required>
                         <div class="invalid-feedback">
                             Porfavor ingrese el precio unitario
@@ -53,8 +53,8 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="stock" class="col-sm-2 col-form-label text-end">Stock:</label>
-                    <div class="col-sm-10">
+                    <label for="stock" class="col-sm-12 col-md-2 col-lg-2 col-form-label text-end">Stock:</label>
+                    <div class="col-sm-12 col-md-10 col-lg-10">
                         <input type="text" class="form-control" id="stock" required>
                         <div class="invalid-feedback">
                             Porfavor ingrese el stock.
@@ -62,8 +62,8 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="proveedor" class="col-sm-2 col-form-label text-end">Proveedor:</label>
-                    <div class="col-sm-10">
+                    <label for="proveedor" class="col-sm-12 col-md-2 col-lg-2 col-form-label text-end">Proveedor:</label>
+                    <div class="col-sm-12 col-md-10 col-lg-10">
                         <input type="text" class="form-control" id="proveedor" required>
                         <div class="invalid-feedback">
                             Porfavor ingrese el proveedor
@@ -71,8 +71,8 @@
                     </div>
                 </div>
                 <div class="row mt-5 mb-5">
-                    <label for="estado" class="col-sm-2 text-end">Estado:</label>
-                    <div class="form-check col-sm-10">
+                    <label for="estado" class="col-sm-2 col-md-2 col-lg-2 text-end">Estado:</label>
+                    <div class="form-check col-sm-10 col-md-10 col-lg-10">
                         <input class="form-check-input" type="checkbox" id="Check" required>
                         <label class="form-check-label" for="activo">Activo</label>
                         <div class="invalid-feedback">
@@ -82,9 +82,9 @@
                 </div>
 
                 <div class="row mb-5">
-                    <label for="categoria" class="col-sm-2 col-form-label text-end">Categoria:</label>
-                    <select class="form-select-sm col-sm-10">
-                        <option value="0">Eliga una categoria</option>
+                    <label for="categoria" class="col-sm-12 col-md-2 col-lg-2 col-form-label text-end">Categoria:</label>
+                    <select class="form-select-sm col-sm-12 col-md-10 col-lg-10">
+                        <option value="0" class="invalid-feedback">Eliga una categoria</option>
                         <option value="1">Categoria 1</option>
                         <option value="2">Categoria 2</option>
                         <option value="3">Categoria 3</option>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="d-flex justify-content-around" >
                     <button type="submit" class="btn btn-primary">Guardar</button>
-                    <button class="btn btn-primary" type="reset">Cancelar</button>
+                    <button class="btn btn-danger" type="reset">Cancelar</button>
                 </div>
             </fieldset>
             

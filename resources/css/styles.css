@@ -2,4 +2,11 @@
     box-sizing: border-box;
 }
 
-
+form {
+    max-width: 975px;
+    padding: 50px;
+    margin: 100px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #959595;
+}
